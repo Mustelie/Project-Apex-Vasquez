@@ -2,7 +2,7 @@ import plotly
 import sqlite3
 import json 
 import requests
-import api_keys
+import api_keys.py
 
 topHeadlinesEndpoints = "/v2/top-headlines?"
 EverythingEndpoints = "/v2/everything?"
