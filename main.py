@@ -12,7 +12,7 @@ newyorktimesID = "the-new-york-times"
 
 def EverythingParams(query, website):
     parameter= {
-    "apiKey": "53e7d35bbc77439d87c20bd7b542cbb7",
+    "apiKey": api_keys.newsAPIKey,
     "q": query,
     "sources":  website, #make sure the input is in id format for the newspai key 
     "sortBy": "publishedAt",
@@ -21,7 +21,6 @@ def EverythingParams(query, website):
     return parameter
 
 def getEverything(dictofparams):
-responses = requests.get(baseURL+EverythingEndpoints, params = dictofparams)
-everything = json.loads(responses.text)
-
-return everything
+    responses = requests.get(baseURL+EverythingEndpoints, params = dictofparams)
+    everything = json.loads(responses.text)
+    return everything
