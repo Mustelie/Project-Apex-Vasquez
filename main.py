@@ -1,5 +1,5 @@
-import plotly
-import sqlite3
+#import plotly
+#import sqlite3
 import json 
 import requests
 import api_keys
@@ -12,9 +12,9 @@ newyorktimesID = "the-new-york-times"
 #here is jsut everything aboout a query from a time constraint 
 def EverythingParams10days(query):
     parameter= {
-    "apiKey": newsAPIKey,
+    "apiKey": api_keys.newsAPIKey,
     "q": query, 
-    "pageSize": 100
+    "pageSize": 100,
     "from": "2019-04-29",
     "to":  "2019-04-19",
     "sortBy": "relevancy"
